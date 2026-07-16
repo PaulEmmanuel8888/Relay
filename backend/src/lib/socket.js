@@ -10,6 +10,10 @@ const io = new Server(server, {
   },
 });
 
+export const getReceiverSocketId = (userId) => {
+  return userSocketMap[userId];
+};
+
 //todo: store online users
 const userSocketMap = {}; //{userId: socketId}
 
