@@ -12,10 +12,10 @@ const io = new Server(server, {
 });
 
 io.on("connection", (socket) => {
-  console.log(`User connected: ${socket.id}`);
+  console.log(`A User connected: ${socket.id}`);
 
-  socket.disconnect(() => {
-    console.log(`User disconnected: ${socket.id}`);
+  socket.on("disconnect", () => {
+    console.log(` A User disconnected: ${socket.id}`);
   });
 });
 
