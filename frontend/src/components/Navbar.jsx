@@ -2,7 +2,7 @@ import { useAuthStore } from "../store/useAuthStore";
 import { Link } from "react-router-dom";
 import RelayLogo from "./RelayLogo";
 
-import { LogOut, MessageSquare, Settings, User } from "lucide-react";
+import { LogOut, Settings, User } from "lucide-react";
 const Navbar = () => {
   const { authUser, logout } = useAuthStore();
 

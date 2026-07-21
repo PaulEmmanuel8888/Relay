@@ -2,3 +2,8 @@
 @plugin "daisyui" {
   themes: all;
 }
+.relay-logo {
+  --relay-icon: hsl(var(--p));
+  --relay-text: hsl(var(--bc));
+  --relay-shadow: hsl(var(--bc));
+}
