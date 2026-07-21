@@ -5,6 +5,7 @@ import SignUpPage from "./pages/SignUpPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import SettingsPage from "./pages/SettingsPage.jsx";
 import ProfilePage from "./pages/ProfilePage.jsx";
+import LandingPage from "./pages/LandingPage.jsx";
 import { useAuthStore } from "./store/useAuthStore.js";
 import { useThemeStore } from "./store/useThemeStore.js";
 import { useEffect } from "react";
@@ -33,10 +34,7 @@ const App = () => {
     <div data-theme={theme}>
       <Navbar />
       <Routes>
-        <Route
-          path="/"
-          element={authUser ? <HomePage /> : <Navigate to="/login" />}
-        />
+        <Route path="/" element={authUser ? <HomePage /> : <LandingPage />} />
         <Route
           path="/signup"
           element={!authUser ? <SignUpPage /> : <Navigate to="/" />}
